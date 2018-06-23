@@ -133,7 +133,7 @@ function map_meta_cap( $cap, $user_id ) {
 		// edit_others_posts
 	case 'edit_post':
 	case 'edit_page':
-		$post = get_post( $args[0] );
+		$post = ( isset( $args[0] ) ) ? get_post( $args[0] ) : get_post();
 		if ( ! $post ) {
 			$caps[] = 'do_not_allow';
 			break;
