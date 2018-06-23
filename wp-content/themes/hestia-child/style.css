@@ -7,3 +7,12 @@ URI: https://www.themeisle.com/
 Template: hestia    
 Version: 0.1
 */
+
+#clients {
+    background: #eee;
+}
+
+.navbar-transparent .navbar-brand img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
