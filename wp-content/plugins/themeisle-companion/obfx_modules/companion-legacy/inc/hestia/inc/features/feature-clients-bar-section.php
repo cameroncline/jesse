@@ -55,6 +55,21 @@ if ( ! function_exists( 'hestia_clients_bar_customize_register' ) ) :
 			)
 		);
 
+		$wp_customize->add_setting(
+			'hestia_clients_bar_title', array(
+				'sanitize_callback' => 'wp_kses_post',
+				'transport'         => $selective_refresh,
+			)
+		);
+
+		$wp_customize->add_control(
+			'hestia_clients_bar_title', array(
+				'label'    => esc_html__( 'Section Title', 'themeisle-companion' ),
+				'section'  => 'hestia_clients_bar',
+				'priority' => 5,
+			)
+		);
+
 		if ( class_exists( 'Hestia_Repeater' ) ) {
 			$wp_customize->add_setting(
 				'hestia_clients_bar_content', array(

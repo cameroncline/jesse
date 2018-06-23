@@ -23,6 +23,7 @@ if ( ! function_exists( 'hestia_clients_bar' ) ) :
 		 * Gather data to display the section.
 		 */
 		$hide_section                       = get_theme_mod( 'hestia_clients_bar_hide', true );
+		$hestia_clients_bar_title    		= get_theme_mod( 'hestia_clients_bar_title', 'Partners' );
 		$hestia_clients_bar_content         = get_theme_mod( 'hestia_clients_bar_content', apply_filters( 'hestia_clients_bar_default_content', false ) );
 		$hestia_clients_bar_content_decoded = json_decode( $hestia_clients_bar_content );
 
@@ -57,8 +58,10 @@ if ( ! function_exists( 'hestia_clients_bar' ) ) :
 					hestia_clients_bar_section_content_trigger();
 				}
 				?>
-                <div class="row" <?php echo hestia_add_animationation( 'fade-up' ); ?>>
+                <h2 class="hestia-title"><?php echo $hestia_clients_bar_title; ?></h2>
+				<div class="row" <?php echo hestia_add_animationation( 'fade-up' ); ?>>
 					<?php
+					
 					if ( ! empty( $hestia_clients_bar_content_decoded ) ) {
 						foreach ( $hestia_clients_bar_content_decoded as $client ) {
 							$image = ! empty( $client->image_url ) ? apply_filters( 'hestia_translate_single_string', $client->image_url, 'Clients bar section' ) : '';
