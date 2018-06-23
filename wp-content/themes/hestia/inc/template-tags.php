@@ -782,7 +782,7 @@ if ( ! function_exists( 'hesta_bottom_footer_content' ) ) :
 			'hestia_general_credits',
 			sprintf(
 				/* translators: %1$s is Theme Name, %2$s is WordPress */
-				esc_html__( '%1$s | Powered by %2$s', 'hestia' ),
+				esc_html__( 'Copyright 2018 © jesse-armas.com. All Rights Reserved' ),
 				sprintf(
 					/* translators: %s is Theme name */
 					'<a href="https://themeisle.com/themes/hestia/" target="_blank" rel="nofollow">%s</a>',
